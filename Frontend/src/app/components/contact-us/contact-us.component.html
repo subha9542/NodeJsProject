@@ -1,0 +1,67 @@
+<body>
+  <app-nav-bar></app-nav-bar>
+  <div class="card">
+    <h2 class="card-title">Contact Us</h2>
+    <form (ngSubmit)="onSubmit(queryForm)" #queryForm="ngForm">
+      <p>
+        <label>
+          <input
+            class="form-control"
+            type="email"
+            required
+            [(ngModel)]="form.email"
+            #email="ngModel"
+            id="email"
+            name="email"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$"
+            placeholder="E-mail address"
+          />
+          <div *ngIf="email.errors && email.touched">
+            <span *ngIf="email.errors.required">E-mail is required </span>
+            <span *ngIf="email.errors.pattern"
+              >You must format your e-mail correctly
+            </span>
+          </div>
+        </label>
+      </p>
+      <!-- <p>
+                <label>
+                    <input type="text" required [(ngModel)]="form.query" #query="ngModel" id="query" name="query" placeholder="Query" />
+                    <div *ngIf="query.errors && query.touched">
+                        <span *ngIf="email.errors.required"> Please enter something </span>
+                    </div>
+                </label>
+            </p> -->
+      <label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          required
+          [(ngModel)]="form.query"
+          #query="ngModel"
+          id="query"
+          name="query"
+          placeholder="Please enter your questions or concerns in this box"
+        ></textarea>
+        <div *ngIf="query.errors && query.touched">
+          <span *ngIf="email.errors.required"> Please enter something </span>
+        </div>
+      </label>
+      <p *ngIf="!email.errors && !query.errors">
+        <button
+          class="btn btn-outline-secondary"
+          [disabled]="queryForm.status === 'INVALID'"
+          type="submit"
+        >
+          Submit
+        </button>
+      </p>
+      <p *ngIf="email.errors || query.errors">
+        <button class="btn btn-outline-secondary" [disabled]="queryForm.status">
+          Submit
+        </button>
+      </p>
+    </form>
+  </div>
+</body>

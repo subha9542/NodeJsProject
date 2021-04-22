@@ -1,0 +1,403 @@
+<!-- Container -->
+
+<body>
+  <app-nav-bar></app-nav-bar>
+  <app-weather></app-weather>
+
+  <div class="container-scroller">
+    <div class="main-panel">
+      <header id="header">
+        <div class="container">
+          <div class="container">
+              <div class="banner-top-thumb-wrap">
+                <hr size="1" style="color: gray" />
+                <div
+                  class="d-lg-flex justify-content-center align-items-center"
+                >
+                  <div
+                    *ngFor="let news of data; let i = index"
+                    class="d-flex justify-content-center mb-3 mb-lg-0 " 
+                  >
+                    <div
+                      *ngIf="i < 3"
+                      class="d-flex justify-content-between mx-1 mb-3 mb-lg-0 banner"
+                      style = "width: 400px;"
+                    >
+                      <div>
+                        <a href="{{ news.newsUrl }}" target="_blank">
+                          <img
+                            src="{{ news.imageUrl }}"
+                            alt="thumb"
+                            class="img-fluid "
+                            style = "width: 200px; height: 75px"
+                          />
+                        </a>
+                      </div>
+                      <h5 class="ml-2 text-center">
+                        <strong class="elegantshd ">{{ news.description | slice: 0:30 }}</strong>
+                         
+                      </h5>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            <app-carousel></app-carousel>
+
+            <div class="world-news">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="d-flex position-relative float-left">
+                    <h3 class="section-title">World News</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="banner col-lg-6 mb-0 mb-sm-2"
+                  style="
+                    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08),
+                      0 0 6px rgba(0, 0, 0, 0.05);
+                  "
+                >
+                      <a
+                        style="color: black; text-decoration: none"
+                        href="https://www.cnn.com/world"
+                        target="_blank"
+                      >
+                        <div class="position-relative image-hover mt-5">
+                          <img
+                            src="assets/images/dashboard/glob.jpg"
+                            class="img-fluid"
+                            alt="world-news"
+                          />
+                          <span class="thumb-title">WORLD</span>
+                        </div>
+                        <h1 class="font-weight-600 mt-3">
+                          World news – breaking news, videos and headlines - CNN
+                        </h1>
+                        <p class="fs-15 font-weight-normal">
+                          View CNN world news today for international news and videos from Europe, Asia, Africa, the Middle East and the Americas.
+                        </p>
+                      </a>
+                </div>
+                <div class="banner col-lg-6 mb-5 mb-sm-2">
+                  <div
+                    class="row"
+                    style="
+                      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08),
+                        0 0 6px rgba(0, 0, 0, 0.05);
+                      margin: 10px;
+                    "
+                  >
+                    <div
+                      *ngFor="let news of data; let i = index"
+                      class="banner col-sm-6 mb-5 mb-sm-2 mt-5"
+                    >
+                      <div *ngIf="i < 4">
+                        <a
+                          style="color: black; text-decoration: none"
+                          href="{{ news.newsUrl }}"
+                          target="_blank"
+                        >
+                          <div class="position-relative image-hover">
+                            <img
+                              src="{{ news.imageUrl }}"
+                              class="img-fluid"
+                              alt="world-news"
+                            />
+                            <span class="thumb-title">
+                              {{ news.newsCategory | uppercase }}
+                            </span>
+                          </div>
+                          <h5 class="font-weight-600 mt-3">
+                            {{ news.title }}
+                          </h5>
+                          <p class="fs-15 font-weight-normal">
+                            {{ news.description | slice: 0:60 }}...
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popular-news">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="d-flex position-relative float-left">
+                    <h3 class="section-title">Popular News</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="banner col-lg-6 mb-5 mb-sm-2"
+                  style="
+                    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08),
+                      0 0 6px rgba(0, 0, 0, 0.05);
+                  "
+                >
+                      <a
+                        style="color: black; text-decoration: none"
+                        href="https://www.ndtv.com/trends/most-popular-news"
+                        target="_blank"
+                      >
+                        <div class="position-relative image-hover mt-5">
+                          <img
+                          src="assets/images/dashboard/banner.jpg"
+                          class="img-fluid"
+                          alt="world-news"
+                        />
+                          <span class="thumb-title">POPULAR</span>
+                        </div>
+                        <h1 class="font-weight-600 mt-3">
+                          Most Popular News Headlines, Top Articles / Stories Trending ...
+                        </h1>
+                        <p class="fs-15 font-weight-normal">
+                          NDTV.COM Trending Now & Latest News – Find Most Popular News Articles, See the List of Popular Articles on NDTV.com. Articles most frequently read by ...
+                        </p>
+                      </a>
+                </div>
+                <div class="col-lg-6 mb-5 mb-sm-2">
+                  <div
+                    class="banner row"
+                    style="
+                      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08),
+                        0 0 6px rgba(0, 0, 0, 0.05);
+                      margin: 10px;
+                    "
+                  >
+                    <div
+                      *ngFor="let news of data_popular; let i = index"
+                      class="banner col-sm-6 mb-5 mb-sm-2 mt-5"
+                    >
+                      <div *ngIf="i < 4">
+                        <a
+                          style="color: black; text-decoration: none"
+                          href="{{ news.newsUrl }}"
+                          target="_blank"
+                        >
+                          <div class="position-relative image-hover">
+                            <img
+                              src="{{ news.imageUrl }}"
+                              class="img-fluid"
+                              alt="world-news"
+                            />
+                            <!--<span class="thumb-title"> {{
+                            news.newsCategory | uppercase
+                          }} </span>-->
+                          </div>
+                          <h5 class="font-weight-600 mt-3">
+                            {{ news.title }}
+                          </h5>
+                          <p class="fs-15 font-weight-normal">
+                            {{ news.description | slice: 0:60 }}...
+                          </p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="live-news">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="d-flex position-relative float-left">
+                    <h3 class="section-title">Live Coverage</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="banner col-lg-6 mb-5 mb-sm-2"
+                  style="
+                    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08),
+                      0 0 6px rgba(0, 0, 0, 0.05);
+                  "
+                >
+                      <a
+                        style="color: black; text-decoration: none"
+                        href="https://www.cbsnews.com/live/"
+                        target="_blank"
+                      >
+                      <div class="position-relative image-hover">
+                        <img
+                          src="assets/images/dashboard/art.jpg"
+                          class="img-fluid"
+                          alt="world-news"
+                        />
+                        <span class="thumb-title">OTHER</span>
+                      </div>
+                      <h1 class="font-weight-600 mt-3">
+                        Live news stream: Watch CBSN – free 24/7 online streaming ...
+                      </h1>
+                      <p class="fs-15 font-weight-normal">
+                        CBSN is CBS News' 24/7 digital streaming news service. It's always on, always free, making CBS News' original, high-quality reporting available to you ...
+                      </p>
+                   </a>
+                </div>
+                <div class="banner col-lg-3">
+                  <div class="position-relative mb-3">
+                    <img
+                      src="assets/images/dashboard/star-magazine-15.jpg"
+                      class="img-fluid"
+                      alt="world-news"
+                    />
+                    <div class="video-thumb text-muted">
+                      <span><i class="mdi mdi-menu-right"></i></span>LIVE
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="d-flex position-relative float-left">
+                        <h3 class="section-title">Latest News</h3>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="border-bottom pb-3">
+                        <h5 class="font-weight-600 mt-0 mb-0">
+                          Jack Ma Shows Why China’s Tycoons Keep Quiet
+                        </h5>
+                        <p class="text-color m-0 d-flex align-items-center">
+                          <span class="fs-10 mr-1">2 hours ago</span>
+                          <i class="mdi mdi-bookmark-outline mr-3"></i>
+                          <span class="fs-10 mr-1">126</span>
+                          <i class="mdi mdi-comment-outline"></i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="border-bottom pt-4 pb-3">
+                        <h5 class="font-weight-600 mt-0 mb-0">
+                          Europe Proposes Strict Rules for Artificial
+                          Intelligence
+                        </h5>
+                        <p class="text-color m-0 d-flex align-items-center">
+                          <span class="fs-10 mr-1">2 hours ago</span>
+                          <i class="mdi mdi-bookmark-outline mr-3"></i>
+                          <span class="fs-10 mr-1">126</span>
+                          <i class="mdi mdi-comment-outline"></i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="border-bottom pt-4 pb-3">
+                        <h5 class="font-weight-600 mt-0 mb-0">
+                          U.S. Home Sales Are Surging. When Does the Music Stop?
+                        </h5>
+                        <p class="text-color m-0 d-flex align-items-center">
+                          <span class="fs-10 mr-1">3 hours ago</span>
+                          <i class="mdi mdi-bookmark-outline mr-3"></i>
+                          <span class="fs-10 mr-1">126</span>
+                          <i class="mdi mdi-comment-outline"></i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="pt-4">
+                        <h5 class="font-weight-600 mt-0 mb-0">
+                          Chevron Lobbies to Head Off New Sanctions on Myanmar
+                        </h5>
+                        <p class="text-color m-0 d-flex align-items-center">
+                          <span class="fs-10 mr-1">4 hours ago</span>
+                          <i class="mdi mdi-bookmark-outline mr-3"></i>
+                          <span class="fs-10 mr-1">126</span>
+                          <i class="mdi mdi-comment-outline"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="banner col-lg-3">
+                  <div class="position-relative mb-3">
+                    <img
+                      src="assets/images/dashboard/star-magazine-14.jpg"
+                      class="img-fluid"
+                      alt="world-news"
+                    />
+                    <div class="video-thumb text-muted">
+                      <span><i class="mdi mdi-menu-right"></i></span>LIVE
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="d-flex position-relative float-left">
+                        <h3 class="section-title">Latest News</h3>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="border-bottom pb-3">
+                        <h5 class="font-weight-600 mt-0 mb-0">
+                          South Korea’s Moon Jae-in sworn in vowing address
+                        </h5>
+                        <p class="text-color m-0 d-flex align-items-center">
+                          <span class="fs-10 mr-1">2 hours ago</span>
+                          <i class="mdi mdi-bookmark-outline mr-3"></i>
+                          <span class="fs-10 mr-1">126</span>
+                          <i class="mdi mdi-comment-outline"></i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="border-bottom pt-4 pb-3">
+                        <h5 class="font-weight-600 mt-0 mb-0">
+                          Biden Commits the US to Halving Greenhouse Gas
+                          Emissions by 2030
+                        </h5>
+                        <p class="text-color m-0 d-flex align-items-center">
+                          <span class="fs-10 mr-1">2 hours ago</span>
+                          <i class="mdi mdi-bookmark-outline mr-3"></i>
+                          <span class="fs-10 mr-1">126</span>
+                          <i class="mdi mdi-comment-outline"></i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="border-bottom pt-4 pb-3">
+                        <h5 class="font-weight-600 mt-0 mb-0">
+                          The Inside Story of How the Super League Fell Apart
+                        </h5>
+                        <p class="text-color m-0 d-flex align-items-center">
+                          <span class="fs-10 mr-1">3 hours ago</span>
+                          <i class="mdi mdi-bookmark-outline mr-3"></i>
+                          <span class="fs-10 mr-1">126</span>
+                          <i class="mdi mdi-comment-outline"></i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="pt-4">
+                        <h5 class="font-weight-600 mt-0 mb-0">
+                          Years After His Death, Richard Wright Has a New Book
+                        </h5>
+                        <p class="text-color m-0 d-flex align-items-center">
+                          <span class="fs-10 mr-1">4 hours ago</span>
+                          <i class="mdi mdi-bookmark-outline mr-3"></i>
+                          <span class="fs-10 mr-1">126</span>
+                          <i class="mdi mdi-comment-outline"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+  <br />
+  <div class="mybutton">
+    <button
+      (click)="topFunction()"
+      id="myBtn"
+      class="btn btn-secondary"
+      title="Go to top"
+    >
+      <strong> Back to top </strong>
+    </button>
+  </div>
+</body>

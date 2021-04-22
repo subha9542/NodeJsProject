@@ -1,0 +1,61 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+<div class="container">
+    <div class="row">
+
+    <section class="col-12- col-sm-6">
+        <div class="login-page text-center">
+        <div class="login-mob-logo">
+        
+        </div>
+        <div class="form-heading">
+            <h2>Add News</h2>
+        </div>
+        <form name="form"  (ngSubmit)="f.form.valid && addNews()"  #f="ngForm" novalidate>
+          <div class="form-group">
+            <label style="margin-right: 100%;">Title</label>
+            <input type="text" name="title" placeholder="Enter Title" class="form-control" [(ngModel)]="model.title" #title="ngModel" [ngClass]="{ 'is-invalid': f.submitted && title.invalid }" required>
+            <div *ngIf="f.submitted && title.invalid" class="invalid-feedback">
+              <div *ngIf="title.errors.required">Title is required and must be valid title</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label style="margin-right: 100%;">Description</label>
+            <input type="text" name="description" placeholder="Description" class="form-control" [(ngModel)]="model.description" #description="ngModel" [ngClass]="{ 'is-invalid': f.submitted && description.invalid }" required >
+            <div *ngIf="f.submitted && description.invalid" class="invalid-feedback">
+              <div *ngIf="description.errors.required">Description is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label style="margin-right: 100%;">URL</label>
+            <input type="text" placeholder="NewsUrl" name="newsUrl" class="form-control" [(ngModel)]="model.newsUrl" #newsUrl="ngModel" [ngClass]="{ 'is-invalid': f.submitted && newsUrl.invalid }" required >
+            <div *ngIf="f.submitted && newsUrl.invalid" class="invalid-feedback">
+              <div *ngIf="newsUrl.errors.required">NewsUrl is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label style="margin-right: 100%;">URL</label>
+            <input type="text" placeholder="ImageUrl" name="imageUrl" class="form-control" [(ngModel)]="model.imageUrl" #imageUrl="ngModel" [ngClass]="{ 'is-invalid': f.submitted && imageUrl.invalid }" required >
+            <div *ngIf="f.submitted && imageUrl.invalid" class="invalid-feedback">
+              <div *ngIf="imageUrl.errors.required">ImageUrl is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="newsCategory" style="margin-right: 100%;">Category:</label>
+            <select name="newsCategory" class="form-control" [(ngModel)]="model.newsCategory" #newsCategory="ngModel" [ngClass]="{ 'is-invalid': f.submitted && newsCategory.invalid }" required >
+                <option disabled>Select newsCategory</option>
+                <option *ngFor="let news of newsCategories">{{news}}</option>
+            </select>
+            <div *ngIf="f.submitted && newsCategory.invalid" class="invalid-feedback">
+                <div *ngIf="f.newsCategory.errors.required">newsCategories is required.</div>
+            </div>
+        </div>
+          <div class="text-center">
+            <button class="btn btn-primary mr-1">Add</button>
+            <button class="btn btn-warning ml-1" (click)="f.reset()">Reset</button>
+          </div>
+        </form>
+        </div>
+        </section>
+        </div>
+        </div>
+        

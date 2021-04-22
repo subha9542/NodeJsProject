@@ -1,0 +1,49 @@
+.card {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 30%;
+  border-color: black;
+  width: 50rem;
+  height: 30rem;
+
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  margin-top: 5%;
+}
+
+form {
+  margin-top: 10%;
+}
+
+textarea {
+  width: 35rem;
+}
+
+textarea::placeholder {
+  text-align: center;
+}
+
+textarea:-ms-input-placeholder {
+  text-align: center;
+}
+
+input {
+  width: 35rem;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border: 2px solid #42a948;
+}
+
+.ng-invalid.ng-touched:not(form) {
+  border: 2px solid #a94442;
+}
+
+input {
+  text-align: center;
+  background-color: whitesmoke;
+}

@@ -1,0 +1,118 @@
+[{
+  "_id": {
+    "$oid": "607f617124843e5d18f46b89"
+  },
+  "publishedAt": {
+    "$date": "2021-04-20T22:34:28.106Z"
+  },
+  "newsCategory": "sports",
+  "title": "Chennai turn back clock as spin-choke leaves Royals gasping for breath",
+  "description": "Everything went to plan for Chennai Super Kings. On a pitch that played very well to start with but slowed down and assisted turn as the match progressed, they posted 188/9. Then, as Rajasthan Royals were mounting a fight through Jos Buttler, MS Dhoni employed his spin-choke, with Ravindra Jadeja and Moeen Ali at its forefront.",
+  "newsUrl": "https://indianexpress.com/article/sports/ipl/chennai-turn-back-clock-as-spin-choke-leaves-royals-gasping-for-breath-7280701/",
+  "imageUrl": "https://cricketaddictor.gumlet.io/wp-content/uploads/2021/03/IPL-2021-Schedule-Tickets-Auction-Teams-Venue-Starting-Date.jpg?compress=true&quality=80&w=1920&dpr=2.6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607f61d524843e5d18f46b8a"
+  },
+  "publishedAt": {
+    "$date": "2021-04-20T22:34:28.106Z"
+  },
+  "newsCategory": "popular",
+  "title": "NASA Mars helicopter Ingenuity: Google celebrates flight with special animation.",
+  "description": "In a historic feat, NASA’s engineers pulled off first powered, controlled flight on another planet. The miniature Mars helicopter, Ingenuity, made history when it rose from the dusty red surface into the dangerously thin air of the planet. To celebrate the joyous occasion, Google has come up with a unique tribute on its homepage.",
+  "newsUrl": "https://indianexpress.com/article/trending/trending-globally/google-celebrates-with-nasa-mars-helicopter-ingenuity-first-flight-special-search-animation-7281610/",
+  "imageUrl": "https://s.yimg.com/os/creatr-uploaded-images/2020-04/160c2bc0-7ba8-11ea-97ed-51c034ee193b",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607f623224843e5d18f46b8b"
+  },
+  "publishedAt": {
+    "$date": "2021-04-20T22:34:28.106Z"
+  },
+  "newsCategory": "world",
+  "title": "Netizens can’t keep calm as Dogecoin records the biggest jump",
+  "description": "Dogecoin, which started as a meme cryptocurrency back in 2013, recorded its highest ever value yet and netizens can’t keep calm.  The virtual currency soared more than 100% to hit an all-time high of $0.298 Friday morning, according to cryptocurrency news and data provider Coin desk.  The boost comes just days after the coin surpassed ten cents in value for the first time, news network CNN reported.",
+  "newsUrl": "https://indianexpress.com/article/trending/trending-globally/dogecoin-highest-value-memes-elon-musk-7276631/",
+  "imageUrl": "https://besthqwallpapers.com/img/original/121119/dogecoin-glitter-logo-cryptocurrency-grid-metal-background-dogecoin-creative.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607f87c454205241f8c658f6"
+  },
+  "publishedAt": {
+    "$date": "2021-04-21T02:01:37.110Z"
+  },
+  "newsCategory": "world",
+  "title": "Pelosi tweets new response to Chauvin verdict after thanking George Floyd 'for sacrificing your life for justice'",
+  "description": "\"George Floyd should be alive today,\" Pelosi, a California Democrat, wrote in a tweet that quoted her remarks from earlier in the day. \"His family's calls for justice for his murder were heard around the world. He did not die in vain. We must make sure other families don't suffer the same racism, violence & pain, and we must enact the George Floyd #JusticeInPolicing Act.\"",
+  "newsUrl": "https://www.cnn.com/2021/04/20/politics/nancy-pelosi-george-floyd-reaction/index.html",
+  "imageUrl": "https://bloximages.newyork1.vip.townnews.com/wfsb.com/content/tncms/assets/v3/editorial/a/ac/aac82a6b-aeb3-5bfe-9b8e-db31c52ab329/607f2c82886ce.image.jpg?resize=1200%2C675",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60805b0c8a793934883b7d97"
+  },
+  "publishedAt": {
+    "$date": "2021-04-21T17:01:08.170Z"
+  },
+  "newsCategory": "sports",
+  "title": "Mets News: Rough night against Cubs, Jacob deGrom's next start moved",
+  "description": "The Mets' offense was as cold as the weather as they lost to the Cubs on Tuesday night at Wrigley Field in Chicago.  Here's what happened in Mets Land, in case you missed it...Luis Rojas and Taijuan Walker (as he was leaving the game) were ejected and the Mets' rally in the ninth inning short-circuited as they lost to the Cubs, 3-1",
+  "newsUrl": "https://sports.yahoo.com/mets-news-rough-night-against-132744086.html",
+  "imageUrl": "https://s.yimg.com/ny/api/res/1.2/Wo_os7tV3shhjYxCifpcuA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MDtjZj13ZWJw/https://s.yimg.com/uu/api/res/1.2/JUwN8MRWzgphQIsR80L8uw--~B/aD01NzY7dz0xMDI0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/sny_articles_235/228bf4797f88a7fa968c8384e0cc1ec1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60805f038a793934883b7d98"
+  },
+  "publishedAt": {
+    "$date": "2021-04-21T17:01:08.170Z"
+  },
+  "newsCategory": "sports",
+  "title": "This date in sports history: April 21",
+  "description": "1951 — Bob Davies’ two foul shots and Jack Coleman’s layup give the Rochester Royals a 79-75 triumph over the New York Knicks in the seventh game of the NBA championship series.  1951 — The Toronto Maple Leafs win the Stanley Cup for the fourth time in five years as they beat the Montreal Canadiens, 3-2, in the fifth game. ",
+  "newsUrl": "https://www.corydondemocrat.com/2021/04/21/week-ahead-sports-20210421134903/",
+  "imageUrl": "https://triblive.com/wp-content/uploads/2021/04/3764040_web1_ptr-Meb-042121.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60808790d672cd63a4460754"
+  },
+  "publishedAt": {
+    "$date": "2021-04-21T17:24:44.108Z"
+  },
+  "newsCategory": "world",
+  "title": "Georgia churches call for Home Depot boycott over voting rights stance",
+  "description": "Georgia religious leaders on Tuesday called for a boycott of Home Depot over the company’s refusal to speak out against a new law restricting voting access in the state.  The move from officials, representing more than 1,000 churches in Georgia, underscores how activists continue to target companies in Georgia to use their considerable political influence to protect the right to vote. Georgia-based Coca-Cola, another boycott target, as well as Delta Air Lines came out forcefully against the restrictions, though only after they were signed into law.",
+  "newsUrl": "https://www.theguardian.com/us-news/2021/apr/21/georgia-churches-home-depot-boycott-voting-rights",
+  "imageUrl": "https://i.guim.co.uk/img/media/45c60f7929a049a5a63ae33933977f60ca5aa6f7/0_116_3500_2101/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=56f81e192ccd10e9dc4327b9b305a3ab",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6081e0fc7823873a58e2102d"
+  },
+  "publishedAt": {
+    "$date": "2021-04-22T17:41:02.062Z"
+  },
+  "newsCategory": "popular",
+  "title": "In pictures: US reacts to Chauvin trial verdict",
+  "description": "A US jury has found a white former police officer guilty of murder over the death of African-American George Floyd on a Minneapolis street last year.  Derek Chauvin, 45, was filmed kneeling on Mr Floyd's neck for more than nine minutes during his arrest last May.  The footage sparked worldwide protests against racism and excessive use of force by police.  Chauvin was found guilty on three charges: second-degree murder, third-degree murder and manslaughter.",
+  "newsUrl": "https://www.bbc.com/news/in-pictures-56830318",
+  "imageUrl": "https://ichef.bbci.co.uk/news/976/cpsprodpb/4460/production/_118140571_hi066880479.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6081e24f7823873a58e2102e"
+  },
+  "publishedAt": {
+    "$date": "2021-04-22T17:41:02.062Z"
+  },
+  "newsCategory": "popular",
+  "title": "Hailey Bieber is a fan of TikTok-popular Starface pimple stickers",
+  "description": "Hailey Bieber uses TikTok-popular Starface pimple stickers.  The 24-year-old model uses the fun patches as part of her night-time skincare routine.  Speaking in a YouTube clip, she said: \"I find that when I’m working a lot and I have a lot of different make-up put on my face … my skin is just insanely sensitive, so I find that I break out.  \"I really, really love the little Starface pimple stickers. They totally help heal a pimple way faster, so if I’m breaking out I will always sleep with one of these on. And they look cute! I’m never mad at a cute little situation.”  Hailey also revealed that she aims to look like a \"glazed doughnut\" before she goes to bed.  After using a cleansing balm to remove her make-up, she will use a milky cleanser to sink into her porse.",
+  "newsUrl": "https://www.shelbynews.com/lifestyles/entertainment/hailey-bieber-is-a-fan-of-tiktok-popular-starface-pimple-stickers/article_4be09ac2-7604-5d60-a884-defc516597d5.html",
+  "imageUrl": "https://bloximages.newyork1.vip.townnews.com/shelbynews.com/content/tncms/assets/v3/editorial/1/1f/11f84c88-b93b-56d3-9544-8ca4239ba29c/60816611b4262.image.jpg?resize=750%2C488",
+  "__v": 0
+}]

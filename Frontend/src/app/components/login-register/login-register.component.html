@@ -1,0 +1,181 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div style="margin-bottom: 10%" class="d-flex justify-content-center">
+    {{ messages }}
+  </div>
+  <hr />
+
+  <div class="row" style="margin-bottom: 10%">
+    <section class="col-12- col-sm-6">
+      <div class="login-page text-center">
+        <div class="form-heading">
+          <h2>Register</h2>
+        </div>
+        <form
+          name="form"
+          (ngSubmit)="!resettedFlag && f.form.valid && register(f)"
+          #f="ngForm"
+          [mustMatch]="['password', 'confirmPassword']"
+          novalidate
+        >
+          <div class="form-group">
+            <input
+              type="text"
+              name="Name"
+              placeholder="Full Name"
+              class="form-control"
+              [(ngModel)]="model.Name"
+              #Name="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && Name.invalid }"
+              required
+            />
+            <div *ngIf="f.submitted && Name.invalid" class="invalid-feedback">
+              <div *ngIf="Name.errors.required">
+                Full Name is required and must be valid name
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              class="form-control"
+              [(ngModel)]="model.email"
+              #email="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+              required
+              email
+            />
+            <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+              <div *ngIf="email.errors.required">Email is required</div>
+              <div *ngIf="email.errors.email">
+                Email must be a valid email address e.g., john@example.com
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              class="form-control"
+              [(ngModel)]="model.password"
+              #password="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
+              required
+              minlength="6"
+            />
+            <div
+              *ngIf="f.submitted && password.invalid"
+              class="invalid-feedback"
+            >
+              <div *ngIf="password.errors.required">Password is required</div>
+              <div *ngIf="password.errors.minlength">
+                Password must be at least 6 characters
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              name="confirmPassword"
+              class="form-control"
+              [(ngModel)]="model.confirmPassword"
+              #confirmPassword="ngModel"
+              [ngClass]="{
+                'is-invalid': f.submitted && confirmPassword.invalid
+              }"
+              required
+            />
+            <div
+              *ngIf="f.submitted && confirmPassword.invalid"
+              class="invalid-feedback"
+            >
+              <div *ngIf="confirmPassword.errors.required">
+                Confirm Password is required
+              </div>
+              <div *ngIf="confirmPassword.errors.mustMatch">
+                Passwords mis-match
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary mr-1">Sign Up</button>
+            <button class="btn btn-warning ml-1" (click)="reset(f)">
+              Reset
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="col-12- col-sm-6">
+      <!-- main app container -->
+      <div class="login-page text-center">
+        <div class="form-heading">
+          <h2>Login</h2>
+        </div>
+        <form
+          name="login_form"
+          (ngSubmit)="!resettedFlag && f_login.form.valid && login()"
+          #f_login="ngForm"
+          novalidate
+        >
+          <div class="form-group">
+            <input
+              type="text"
+              name="login_email"
+              placeholder="Email"
+              class="form-control"
+              [(ngModel)]="login_model.login_email"
+              #login_email="ngModel"
+              [ngClass]="{
+                'is-invalid': f_login.submitted && login_email.invalid
+              }"
+              required
+              email
+            />
+            <div
+              *ngIf="!resettedFlag && f_login.submitted && login_email.invalid"
+              class="invalid-feedback"
+            >
+              <div *ngIf="login_email.errors.required">Email is required</div>
+              <div *ngIf="login_email.errors.email">
+                Email must be a valid email address e.g., john@example.com
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              placeholder="Password"
+              name="login_password"
+              class="form-control"
+              [(ngModel)]="login_model.login_password"
+              #login_password="ngModel"
+              [ngClass]="{
+                'is-invalid': f_login.submitted && login_password.invalid
+              }"
+              required
+            />
+            <div
+              *ngIf="f_login.submitted && login_password.invalid"
+              class="invalid-feedback"
+            >
+              <div *ngIf="login_password.errors.required">
+                Password is required
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary mr-1">Login</button>
+            <button class="btn btn-warning ml-1" (click)="reset(f_login)">
+              Reset
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

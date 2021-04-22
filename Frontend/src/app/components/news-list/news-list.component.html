@@ -1,0 +1,36 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+
+<div style="margin-bottom: 5%;" class="d-flex justify-content-center">
+  {{messages}}
+</div>
+<div class="container row mx-auto justify-content-center">
+  <table class="table table-center mx-auto ">
+    <thead class="table table-dark table-bordered">
+      <tr>
+        <th class="th-sm">Title</th>
+        <th class="th-sm">Description</th>
+        <th class="th-sm">Published At</th>
+        <th class="th-sm">Edit/Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let news of newsList; index as i">
+        <td>{{ news.title }}</td>
+        <td>{{ news.description }}</td>
+        <td>{{ news.publishedAt }}</td>
+        <td>
+          <button
+            (click)="edit(i)"
+            class="btn btn-outline-secondary"
+            style="margin-right: 10 px"
+          >
+            Edit
+          </button>
+          <button class="btn btn-outline-danger" (click)="delete(i)" >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
