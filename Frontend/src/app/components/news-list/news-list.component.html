@@ -1,10 +1,14 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
 <app-admin-nav-bar></app-admin-nav-bar>
 
 <div style="margin-bottom: 5%;" class="d-flex justify-content-center">
   {{messages}}
 </div>
 <div class="container row mx-auto justify-content-center">
-  <table class="table table-center mx-auto ">
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
     <thead class="table table-dark table-bordered">
       <tr>
         <th class="th-sm">Title</th>

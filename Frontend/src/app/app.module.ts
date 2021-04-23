@@ -22,6 +22,7 @@ import { AddNewsComponent } from './components/add-news/add-news.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { NewsListComponent } from './components/news-list/news-list.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     FormsModule,
     HttpClientModule,
     CommonModule,
+    DataTablesModule
   ],
 
   providers: [

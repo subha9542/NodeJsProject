@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SportsService } from '../../services/sports.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { Subject } from 'rxjs';
 @Component({
   selector: 'app-news-list',
   templateUrl: './news-list.component.html',
@@ -10,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class NewsListComponent implements OnInit {
   newsList: any = [];
   messages:any;
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject<any>();
 
   constructor(private sportsService: SportsService, private router: Router,
     private route: ActivatedRoute) {}
@@ -17,7 +20,7 @@ export class NewsListComponent implements OnInit {
     this.messages = this.route.snapshot.paramMap.get('messages');
     this.sportsService.fetchData().subscribe((res: any) => {
       this.newsList = res;
-
+      this.dtTrigger.next();
       console.log(this.newsList);
     });
   }
